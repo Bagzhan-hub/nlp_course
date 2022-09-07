@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 LABEL maintainer "NLP Team <no@ema.il>"
 
 
@@ -22,7 +22,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted 
                        g++ && \
     ln -s /usr/bin/swig3.0 /usr/bin/swig
 
-RUN pip install --upgrade pip==9.0.3 && \
+RUN pip install --upgrade pip==20.0.2 && \
     pip install --upgrade numpy scipy && \
     pip install --upgrade sklearn \
                            jupyter \
@@ -39,7 +39,7 @@ RUN pip install --upgrade pip==9.0.3 && \
                            torchvision \
                            keras
 
-RUN pip3 install --upgrade pip==9.0.3 && \
+RUN pip3 install --upgrade pip==20.0.2 && \
     pip3 install --upgrade numpy scipy && \
     pip3 install --upgrade sklearn \
                            jupyter \
